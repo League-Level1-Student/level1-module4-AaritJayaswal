@@ -56,7 +56,7 @@ frame.setTitle("Jeopardy");
 		// 3. Create a JPanel variable to hold the header using the createHeader method
 JPanel panel = new JPanel(); 
 
-panel=createHeader("Colleges & Universities");
+panel=createHeader("World History");
 		// 4. Add the header component to the quizPanel
 quizPanel.add(panel);
 		// 5. Add the quizPanel to the frame
@@ -97,7 +97,7 @@ quizPanel.add(firstButton);
 		// Create a new JButton
 JButton button = new JButton();
 		// Set the text of the button to the dollarAmount
-button.setText("$200");
+button.setText(dollarAmount);
 		// Increment the buttonCount (this should make the layout vertical)
 buttonCount++;
 		// Return your new button instead of the temporary button
@@ -113,8 +113,13 @@ buttonCount++;
 
 		JButton buttonPressed = (JButton) e.getSource();
 		// If the buttonPressed was the firstButton
-
+if (buttonPressed == firstButton) {
+	
 			// Call the askQuestion() method
+	
+	askQuestion("Around 200 B.C. an anonymous Chinese innovator froze rice milk &"
+			+ " spices in a paste creating a type of this dessert");
+}
  
 		// Complete the code in the askQuestion() method. When you play the game, the score should change.
 
@@ -129,9 +134,9 @@ buttonCount++;
 	private void askQuestion(String question, String correctAnswer, int prizeMoney) {
 		
 		// Use the playJeopardyTheme() method to play music while the use thinks of an answer
-		
+		playJeopardyTheme();
 		// Remove this temporary message and replace it with a pop-up that asks the user the question
-		JOptionPane.showMessageDialog(null, "this is where the question will be asked");
+		JOptionPane.showInputDialog(null, "Around 200 B.C. an anonymous Chinese innovator froze rice milk & spices in a paste creating a type of this dessert");
 		
 		// Stop the theme music when they have entered their response. Hint: use the sound variable 
 		
