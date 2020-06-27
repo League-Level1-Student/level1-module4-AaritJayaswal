@@ -77,12 +77,11 @@ public void actionPerformed(ActionEvent arg0) {
 	// TODO Auto-generated method stub
 	if (arg0.getSource() ==two) {
 		
-		showPictureFromTheInternet("https://www.thelabradorsite.com/wp-content/uploads/2019/03/Cute-puppy-Names-Over-200-Adorable-Ideas-LS-long.jpg");
+		showPictureFromTheInternet("https://media.npr.org/assets/img/2016/10/14/gettyimages-590648955_wide-9434ebe4d129c52f37d9655c31cfe59c5f6c9ba5-s800-c85.jpg");
 		
 	}
 	
 	if (arg0.getSource()==one) {
-		
 		
 		showPictureFromTheInternet("https://media.npr.org/assets/img/2016/10/14/gettyimages-590648955_wide-9434ebe4d129c52f37d9655c31cfe59c5f6c9ba5-s800-c85.jpg");
 		
