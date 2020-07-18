@@ -46,26 +46,52 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
 System.out.println(mouseX+", "+mouseY);
    	 // 6. Add the mouseY variable to the previous line so that it prints out too (no new line)
    	 // 7. Adjust your secret location co-ordinates here:
-   	 int secretLocationX = 200;
-   	 int secretLocationY = 500;
+   	 int secretLocationX = 500;
+   	 int secretLocationY = 300;
    	 /** If the mouse co-ordinates and secret location are close, we'll let them ask a question. */
    	 if (areClose(mouseX, secretLocationX) && areClose(mouseY, secretLocationY)) {
    		 // 8. Get the user to enter a question for the fortune teller
-JOptionPane.showMessageDialog(null,"ds");
+//JOptionPane.showInputDialog(null,"What is your message for the fortune teller?");
    		 // 9. Find a spooky sound and put it in your default package (freesound.org)
-   		 // AudioClip sound = JApplet.newAudioClip(getClass().getResource("creepy-noise.wav"));
+   		 AudioClip sound = JApplet.newAudioClip(getClass().getResource("creepy-noise.wav"));
    		 // 10. Play the sound
-
+sound.play();
    		 // 11. Use the pause() method below to wait until your music has finished
-
+ pause(4);
    		 // 12. Insert your completed Magic 8 ball code here
+int r = new Random().nextInt(4);
+// 3. Print out this variable
+System.out.println(r);
+// 4. Get the user to enter a question for the 8 ball
+JOptionPane.showInputDialog(null,"What is your question for the fortune teller?");
+// 5. If the random number is 0
+if(r==0) {
 
+JOptionPane.showMessageDialog(null,"Yes"); 
+}
+// -- tell the user "Yes"
+
+// 6. If the random number is 1
+if(r==1) {
+JOptionPane.showMessageDialog(null,"No");
+}	
+//-- tell the user "No"
+if(r==2) {
+JOptionPane.showMessageDialog(null,"Maybe you should ask Google");
+}	
+
+// 7. If the random number is 2
+
+// -- tell the user "Maybe you should ask Google?"
+if(r==3) {
+JOptionPane.showMessageDialog(null,"Perhaps");
+}	
    	 }
 
     }
 
     private boolean areClose(int mouseX, int secretLocationX) {
-   	 return mouseX < secretLocationX + 15 && mouseX > secretLocationX - 15;
+   	 return mouseX < secretLocationX + 30 && mouseX > secretLocationX - 30;
     }
 
     private void pause(int seconds) {
