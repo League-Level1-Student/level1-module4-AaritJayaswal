@@ -5,11 +5,28 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class Calculator implements Runnable, ActionListener{
 
+	JButton add = new JButton();
+	JButton subtract = new JButton();
+	JButton multiply = new JButton();
+	JButton divide = new JButton();
+	
+	JTextField number1 = new JTextField(5);
+	JTextField number2 = new JTextField(5);
+	
+	JLabel label = new JLabel();
+	
+	Double a;
+	
+
+	
+	
+	
 	public void	run(){
 			
 			JFrame frame = new JFrame();
@@ -18,16 +35,15 @@ public class Calculator implements Runnable, ActionListener{
 			
 			JPanel panel = new JPanel();
 					
-		JTextField number1 = new JTextField(5);
-		JTextField number2 = new JTextField(5);
 		
-		JButton add = new JButton();
+		
+		
 		add.setText("add");
-		JButton subtract = new JButton();
+		
 		subtract.setText("subtract");
-		JButton multiply = new JButton();
+		
 		multiply.setText("multiply");
-		JButton divide = new JButton();
+		
 		divide.setText("divide");
 		
 		panel.add(number1);
@@ -37,14 +53,12 @@ public class Calculator implements Runnable, ActionListener{
 		panel.add(multiply);
 		panel.add(divide);
 	
+		panel.add(label);
+		
 	frame.add(panel);
 	frame.pack();
 	
-	String one = number1.getText();
-	int o = Integer.parseInt(one);
 	
-	String two = number2.getText();
-	int t = Integer.parseInt(two);	
 	
 	
 	
@@ -57,6 +71,74 @@ public class Calculator implements Runnable, ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
+		if(arg0.getSource()==add){
+			
+			String one = number1.getText();
+			Double o = Double.parseDouble(one);
+			
+			String two = number2.getText();
+			Double t = Double.parseDouble(two);	
+			
+			a = o+t;
+			
+			 String answer = String.valueOf(a);
+				
+				
+			 label.setText(answer);
+			
+		}
 		
+		else if(arg0.getSource()==subtract) {
+			
+			String one = number1.getText();
+			Double o = Double.parseDouble(one);
+			
+			String two = number2.getText();
+			Double t = Double.parseDouble(two);	
+			
+			a = o-t;
+			
+			 String answer = String.valueOf(a);
+			 label.setText(answer);
+			
+			
+			
+		}
+		
+		else if(arg0.getSource()==multiply) {
+		
+			String one = number1.getText();
+			Double o = Double.parseDouble(one);
+			
+			String two = number2.getText();
+			Double t = Double.parseDouble(two);	
+			
+			a = o*t;
+			
+			 String answer = String.valueOf(a);
+				
+			 label.setText(answer);	
+		
+			
+		}
+		
+		else {
+		
+			
+			
+			String one = number1.getText();
+			Double o = Double.parseDouble(one);
+			
+			String two = number2.getText();
+			Double t = Double.parseDouble(two);	
+			
+			a = o/t;
+			
+			 String answer = String.valueOf(a);
+				
+				label.setText(answer);
+			
+			
 	}
+}
 }

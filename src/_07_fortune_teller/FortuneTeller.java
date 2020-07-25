@@ -91,7 +91,7 @@ JOptionPane.showMessageDialog(null,"Perhaps");
     }
 
     private boolean areClose(int mouseX, int secretLocationX) {
-   	 return mouseX < secretLocationX + 30 && mouseX > secretLocationX - 30;
+   	 return mouseX < secretLocationX + 20 && mouseX > secretLocationX - 20;
     }
 
     private void pause(int seconds) {
