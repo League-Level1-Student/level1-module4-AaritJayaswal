@@ -113,12 +113,12 @@ buttonCount++;
 
 		JButton buttonPressed = (JButton) e.getSource();
 		// If the buttonPressed was the firstButton
-if (buttonPressed == firstButton) {
+//if (buttonPressed == firstButton) {
 	
 			// Call the askQuestion() method
 	
-	askQuestion("Around 200 B.C. an anonymous Chinese innovator froze rice milk &"
-			+ " spices in a paste creating a type of this dessert");
+	//askQuestion("Around 200 B.C. an anonymous Chinese innovator froze rice milk &"
+//			+ " spices in a paste creating a type of this dessert");
 }
  
 		// Complete the code in the askQuestion() method. When you play the game, the score should change.
@@ -129,7 +129,7 @@ if (buttonPressed == firstButton) {
 
 		// Clear the text on the button that was pressed (set the button text to nothing)
 
-	}
+	//}
 
 	private void askQuestion(String question, String correctAnswer, int prizeMoney) {
 		

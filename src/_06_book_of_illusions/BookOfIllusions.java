@@ -33,9 +33,9 @@ JFrame frame = new JFrame();
 		// 6. create a variable of type "JLabel" but don’t initialize it yet
 		JLabel label;
 		// 7. use the "loadImage..." methods below to initialize your JLabel
-		 label = new JLabel loadImageFromComputer(Illusion1);
+		// label = new JLabel loadImageFromComputer(Illusion1);
 		// 8. add your JLabel to the frame
-		 frame.add(label);
+	//	 frame.add(label);
 		// 9. call the pack() method on the frame
 		 frame.pack();
 		// 10. add a mouse listener to your frame (hint: use *this*)
@@ -44,13 +44,13 @@ JFrame frame = new JFrame();
 
 	public void mousePressed(MouseEvent e) {
 		// 11. Print "clicked!" to the console when the mouse is pressed
-if(e.getSource()==) {
+//if(e.getSource()==) {
 	
 }
 				// 12. remove everything from the frame that was added earlier
 		// 13. load a new image like before (this is more than one line of code)
 		// 14. pack the frame
-	}
+//}
 
 	// [OPTIONAL] 15. goad your users with some annoying or witty pop-ups
 

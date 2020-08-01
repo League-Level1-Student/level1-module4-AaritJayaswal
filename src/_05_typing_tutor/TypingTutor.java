@@ -14,11 +14,11 @@ public class TypingTutor {
 		
 		frame.setTitle("Type or Die");
 		
-		currentLetter = generateRandomLetter();
+		//currentLetter = generateRandomLetter();
 
-		char generateRandomLetter() {
-		    Random r = new Random();
-		    return (char) (r.nextInt(26) + 'a');
+		//char generateRandomLetter() {
+		//    Random r = new Random();
+	//	    return (char) (r.nextInt(26) + 'a');
 		}
 	
 		
@@ -32,4 +32,4 @@ public class TypingTutor {
 	}
 	
 	
-}
+//}
